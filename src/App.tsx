@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { createBrowserRouter, RouterProvider, Route, createRoutesFromElements, Navigate } from "react-router-dom";
+import { createHashRouter, RouterProvider, Route, createRoutesFromElements, Navigate } from "react-router-dom";
 import ErrorPage from "./pages/error-page/error-page";
 import Login from "./pages/login/login"
 import DashBoard from "./pages/dashboard";
@@ -12,7 +12,7 @@ import AssignTask from "./pages/assigntask/assigntask";
 
 export default function App() {
   const { currentUser } = useAuthContext() as AuthContextType;
-  const router = createBrowserRouter(
+  const router = createHashRouter(
     createRoutesFromElements(
       <Route errorElement={<ErrorPage />}>
         <Route element={<ProtectedRoutes/>} >
@@ -26,7 +26,7 @@ export default function App() {
         <Route path="/login" element={currentUser ? <Navigate to="/" /> : <Login />} />
       </Route>
     ), {
-    basename: "/uwc",
+      basename: "/",
     }
   );
   return (

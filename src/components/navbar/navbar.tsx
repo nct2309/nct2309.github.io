@@ -9,8 +9,8 @@ interface MenuProps {
 }
   
 const menu = [
-    { id: 1, name: "Progress of Tasks", path: "/taskprogress" },
-    { id: 2, name: "Task Assignment", path: "/assigntask" },
+    { id: 1, name: "Progress of Tasks", path: "/uwc/#/taskprogress" },
+    { id: 2, name: "Task Assignment", path: "/uwc/#/assigntask" },
 ];
 
 const NavBar = () => {
@@ -19,7 +19,7 @@ const NavBar = () => {
     return (
         <Navbar id="sidebar" collapseOnSelect expand="md" className="flex-column">
             <Container className="flex-column">
-                <Navbar.Brand href="/">UWC 2.0</Navbar.Brand>
+                <Navbar.Brand href="/uwc/#/">UWC 2.0</Navbar.Brand>
                 <p id="greeting">Hi, {name}!</p>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
                 <Navbar.Collapse id="responsive-navbar-nav" className="flex-column">
@@ -30,10 +30,10 @@ const NavBar = () => {
                             </Nav.Item>
                         ))}
                         <Nav.Item as="li">
-                            <Nav.Link href="/profile">User Profile</Nav.Link>
+                            <Nav.Link href="/uwc/#/profile">User Profile</Nav.Link>
                         </Nav.Item>
                         <Nav.Item as="li">
-                            <Nav.Link onClick={logout} href="/login" >Log out</Nav.Link>
+                            <Nav.Link onClick={logout} href="/uwc/#/login" >Log out</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>

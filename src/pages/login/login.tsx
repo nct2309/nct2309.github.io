@@ -17,7 +17,7 @@ const Login: React.FC = () => {
     const loginUser = validateLogin(username, password);
     if (loginUser) {
       login(loginUser);
-      navigate("/");
+      navigate("/#");
     }
     else {
       alert("Invalid username or password");
