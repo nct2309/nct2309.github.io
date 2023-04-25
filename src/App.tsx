@@ -14,7 +14,6 @@ export default function App() {
   const { currentUser } = useAuthContext() as AuthContextType;
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <>
       <Route errorElement={<ErrorPage />}>
         <Route element={<ProtectedRoutes/>} >
           <Route path="/" element={<DashBoard />}>
@@ -26,8 +25,9 @@ export default function App() {
         </Route>
         <Route path="/login" element={currentUser ? <Navigate to="/" /> : <Login />} />
       </Route>
-      </>
-    )
+    ), {
+    basename: "/uwc",
+    }
   );
   return (
     <>
