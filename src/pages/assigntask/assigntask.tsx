@@ -95,7 +95,7 @@ const AssignTask: React.FC = () => {
         </Col>
       </Row>
       <Row>
-        <div style={{ height: '15rem', width: '50rem' }}>
+        <div style={{ height: '15rem', width: '55rem' }}>
           <Map center={center} zoom={zoom} />
         </div>
       </Row>
