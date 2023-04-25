@@ -1,0 +1,85 @@
+/* Set the background color of the entire page */
+body {
+  background-color: #fcfcfc;
+  font-family: Arial, sans-serif;
+}
+
+/* Center the login form */
+form {
+  background-color: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 20rem;
+  margin: auto;
+  position: relative;
+  top: 25%;
+  left: 0;
+  right: 0;
+  border-radius: 15px;
+}
+
+h1 {
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  color: #e00e0e;
+}
+
+h2 {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  top: 8rem;
+  left: 0;
+  right: 0;
+}
+
+form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+form button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+form button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+form p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+form p a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+form p a:hover {
+  text-decoration: underline;
+}

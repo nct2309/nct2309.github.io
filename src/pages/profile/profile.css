@@ -1,0 +1,12 @@
+#userprofile {
+    margin-top: 5rem;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+    max-width: 50rem;
+}
+
+#userprofile #readOnly {
+    box-shadow: none;
+}
