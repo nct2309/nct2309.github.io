@@ -36,7 +36,7 @@ const TaskProgress = () => {
       </Row>
       <div style={{ overflowX: 'visible' }}>
         <Row>
-          <div style={{ overflow: 'auto', height: '400px' }}>
+          <div style={{ overflow: 'auto', height: '33rem' }}>
             <Table striped bordered hover>
               <thead style={{ backgroundColor: '#f8f9fa', position: 'sticky', top: 0 }}>
                 <tr>

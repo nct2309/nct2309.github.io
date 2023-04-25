@@ -2,14 +2,11 @@ import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-interface MapProps {
-  center: [number, number];
-  zoom: number;
-}
 
-const Map: React.FC<MapProps> = ({ center, zoom }) => {
+const Map: React.FC = () => {
   const mapRef = useRef<HTMLDivElement | null>(null);
-
+  const center: [number, number] = [10.7731603, 106.6595802];
+  const zoom = 18;
   useEffect(() => {
     if (!mapRef.current) return;
 
