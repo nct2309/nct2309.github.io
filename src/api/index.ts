@@ -6,7 +6,13 @@ type GetUsersResponse = {
 
 export async function getUsers() {
     try {
-        const response = await fetch('localhost:8080/users/1', { credentials: 'include' });
+        const response = await fetch('https://localhost:8080/users/1', { 
+            method: 'GET',
+            credentials: 'include', 
+            headers: {
+                'Content-Type': 'application/json',
+            },
+         });
 
         if (response.ok) {
             const data = await response.json() as GetUsersResponse;
