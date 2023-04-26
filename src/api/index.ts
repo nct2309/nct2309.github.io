@@ -6,17 +6,16 @@ type GetUsersResponse = {
 };
   
 export async function getUsers() {
-    try {
         // 👇️ const data: GetUsersResponse
-        const { data, status } = await axios.get<GetUsersResponse>(
-        'http://localhost:8080/users/1',
-        {   
-            withCredentials: true,
-            headers: {
-            Accept: 'application/json',
-            },
-        },
-        );
+        const data = await axios.get<GetUsersResponse>(
+        'https://localhost:8080/users/1', { withCredentials: true })
+        .then(response => {
+          console.log(response.data);
+        })
+        .catch(error => {
+          console.log(error);
+        });
+      
 
         console.log(JSON.stringify(data, null, 4));
 
@@ -24,13 +23,5 @@ export async function getUsers() {
         console.log('response status is: ', status);
 
         return data;
-    } catch (error) {
-        if (axios.isAxiosError(error)) {
-        console.log('error message: ', error.message);
-        return error.message;
-        } else {
-        console.log('unexpected error: ', error);
-        return 'An unexpected error occurred';
-        }
-    }
+    
 }
