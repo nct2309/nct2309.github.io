@@ -1,24 +1,34 @@
 import { User } from './types';
 
-export async function getUsers() {
-  try {
-    const response = await fetch('https://localhost:8080/users/1', {
-      method: 'GET',
-      credentials: 'include',
-      headers: {
-        accept: 'application/json',
-      },
-      mode: 'no-cors',
-    });
+type GetUsersResponse = {
+    data: User[];
+};
 
-    if (response.ok) {
-      const data = await response.json();
-      return data.data;
-    } else {
-      throw new Error(`Error fetching users: ${response.statusText}`);
+export async function getUsers() {
+    try {
+        const response = await fetch('https://localhost:8080/users/1', { 
+            method: 'GET',
+            credentials: 'include', 
+            headers: {
+                accept: 'application/json',
+            },
+            mode: 'no-cors',
+         });
+
+        if (response.ok) {
+            const data = await response.json() as GetUsersResponse;
+            console.log(data);
+
+            console.log(JSON.stringify(data, null, 4));
+
+            console.log('response status is: ', response.status);
+
+            return data.data;
+        } else {
+            throw new Error(`Error fetching users: \${response.statusText}`);
+        }
+    } catch (error) {
+        console.log(error);
+        return [];
     }
-  } catch (error) {
-    console.log(error);
-    return [];
-  }
 }
