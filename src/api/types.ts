@@ -9,7 +9,7 @@ export interface User{
     is_available: number
 }
 
-
+// Should be not used
 export interface Worker {
     id: string,
     username: string,
@@ -29,9 +29,27 @@ export interface Vehicle {
 }
 
 export interface MCP {
-    id: string,
+    id: number,
     location: [number, number],
     capacity: number,
     used: number,
     is_full: boolean,
+}
+
+export interface Vehicles {
+    id: number,
+    is_available: boolean,
+    capacity: number,
+    fuel: number,
+    type: string,
+}
+
+export interface Task {
+    id: number,
+    from_user_id: number,
+    to_user_id: number,
+    vehicle_id: number,
+    mcp_location: [number, number][],
+    created_at: string,
+    completed_at: string,
 }

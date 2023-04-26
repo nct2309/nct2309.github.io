@@ -1,23 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { User } from "../../api/types";
+import React from "react";
+//import { useState, useEffect } from "react";
+//import { User } from "../../api/types";
 import "./home.css";
-import { getUsers } from "../../api/index";
+//import { getUsers } from "../../api/index";
 const Home: React.FC = () => {
-  const [users, setUsers] = useState<User[]>([]);
+  //const [users, setUsers] = useState<User[]>([]);
 
-  useEffect(() => {
-    async function fetchData() {
-      const response = await getUsers();
-      if (Array.isArray(response)) {
-        setUsers(response);
-      } else {
-        console.log('Error fetching users:', response);
-      }
-    }
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const response = await getUsers();
+  //     if (Array.isArray(response)) {
+  //       setUsers(response);
+  //     } else {
+  //       console.log('Error fetching users:', response);
+  //     }
+  //   }
 
-    fetchData();
-  }, []);
-  console.log(users);
+  //   fetchData();
+  // }, []);
+  // console.log(users);
+
   return (
     <p id= "home-content">
       Urban Waste Collection 2.0
