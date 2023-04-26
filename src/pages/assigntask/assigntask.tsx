@@ -7,9 +7,10 @@ import RouteList from '../../components/routelist/routelist';
 
 
 const AssignTask: React.FC = () => {
-  const [role, setRole] = useState('');
+  const [role, setRole] = useState("");
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+
   };
 
   return (
@@ -29,10 +30,9 @@ const AssignTask: React.FC = () => {
                 <option value="janitor">Janitor</option>
             </Form.Control>
         </Form.Group>
-        
-          <WorkerList />
+          <WorkerList role = {role}/>
 
-          <VehicleList />
+          <VehicleList role = {role}/>
           
           <RouteList />
 

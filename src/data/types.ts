@@ -8,5 +8,24 @@ export interface User{
     password: string,
     birthDate: string,
     avatar: string,
-    memberSince: string
+    memberSince: string,
+}
+
+
+export interface Worker {
+    id: string,
+    username: string,
+    firstName: string,
+    lastName: string,
+    position:  number,
+    avatar: string,
+    status: number,
+    memberSince: string,
+}
+
+export interface Vehicle {
+    id: string,
+    location: string,
+    usebyID: string,
+    status: number,
 }

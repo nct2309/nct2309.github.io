@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Container, Row, Form, Table } from 'react-bootstrap';
 import "./taskprogress.css"
 import { activityData } from '../../data/data';
-const items = activityData;
+
+export const items = activityData;
 
 const TaskProgress = () => {
   const [searchTerm, setSearchTerm] = useState('');

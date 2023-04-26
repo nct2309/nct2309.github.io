@@ -6,7 +6,7 @@ import 'leaflet/dist/leaflet.css';
 const Map: React.FC = () => {
   const mapRef = useRef<HTMLDivElement | null>(null);
   const center: [number, number] = [10.7731603, 106.6595802];
-  const zoom = 18;
+  const zoom = 17.5;
   useEffect(() => {
     if (!mapRef.current) return;
 
