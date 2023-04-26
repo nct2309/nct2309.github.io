@@ -5,6 +5,7 @@ import { Worker } from "../../data/types";
 
 interface SelectProps {
     role: string;
+    setWorker: React.Dispatch<React.SetStateAction<Worker | null>>;
 }
 
 const WorkerList = (selectProps: SelectProps) => {
@@ -30,6 +31,7 @@ const WorkerList = (selectProps: SelectProps) => {
                 onChange={(e) => {
                     setWorkerSelect(e.target.value)
                     setWorker(workers.find((worker: Worker) => worker.id === e.target.value))
+                    selectProps.setWorker(worker);
                 }}
                 >
                 <option value="">Choose...</option>

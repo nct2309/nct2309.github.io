@@ -4,10 +4,15 @@ import { Form, Button, Container, Row } from 'react-bootstrap';
 import WorkerList from '../../components/workerlist/workerlist';
 import VehicleList from '../../components/vehiclelist/vehiclelist';
 import RouteList from '../../components/routelist/routelist';
-
+import { Worker, Vehicle } from '../../data/types';
+import './assigntask.css';
 
 const AssignTask: React.FC = () => {
   const [role, setRole] = useState("");
+  const [worker, setWorker] = useState<Worker | null>(null);
+  const [vehicle, setVehicle] = useState<Vehicle | null>(null);
+  const [mcps, setMcps] = useState<[number, number][]>([]);
+  
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
 
@@ -16,8 +21,8 @@ const AssignTask: React.FC = () => {
   return (
     <Container>
       <Row>
-        <Form onSubmit={handleSubmit}>
-
+        <Form id="assigntask" onSubmit={handleSubmit}>
+        <Form.Label id="header"> Assign Task </Form.Label>
         <Form.Group controlId="role-select">
             <Form.Label>Select role</Form.Label>
                 <Form.Control
@@ -26,13 +31,14 @@ const AssignTask: React.FC = () => {
                 onChange={(e) => setRole(e.target.value)}
                 >
                 <option value="">Choose...</option>
-                <option value="collector">Collector</option>
-                <option value="janitor">Janitor</option>
+                <option value="collector">Collector - Truck</option>
+                <option value="janitor">Janitor - Troller</option>
             </Form.Control>
         </Form.Group>
-          <WorkerList role = {role}/>
 
-          <VehicleList role = {role}/>
+          <WorkerList role = {role} setWorker={setWorker}/>
+
+          <VehicleList role = {role} setVehicle={setVehicle}/>
           
           <RouteList />
 
@@ -44,7 +50,7 @@ const AssignTask: React.FC = () => {
       </Row>
 
       <Row>
-        <div style={{ height: '20rem', width: '100%' }}>
+        <div style={{ height: '25rem', width: '100%' }}>
           <Map/>
         </div>
       </Row>

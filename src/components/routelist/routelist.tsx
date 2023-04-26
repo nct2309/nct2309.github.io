@@ -2,17 +2,22 @@ import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { routeData } from "../../data/data";
 
+interface SelectProps {
+  role: string;
+  setMCPs: React.Dispatch<React.SetStateAction<null>>;
+}
+
 interface SelectOption {
-  value: string;
-  label: string;
+  id: string;
+  value: [number, number][];
 }
 
 const routes: SelectOption[] = [
-  { value: 'route1', label: 'Route 1' },
-  { value: 'route2', label: 'Route 2' },
+  { id: 'Route 1', value: [] },
+  { id: 'Route 2', value: [] },
 ];
 
-const VehicleList = () => {
+const RouteList = () => {
     const [route, setRoute] = useState('');
 
     return (
@@ -25,12 +30,12 @@ const VehicleList = () => {
         >
           <option value="">Choose...</option>
           {routes.map((route) => (
-            <option key={route.value} value={route.value}>
-              {route.label}
+            <option key={route.id} value={route.id}>
+              {route.id}
             </option>
           ))}
         </Form.Control>
       </Form.Group>
     );
 }
-export default VehicleList;
+export default RouteList;

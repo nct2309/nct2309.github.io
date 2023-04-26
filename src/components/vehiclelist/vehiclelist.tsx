@@ -5,6 +5,7 @@ import { Vehicle } from "../../data/types";
 
 interface SelectProps {
   role: string;
+  setVehicle: React.Dispatch<React.SetStateAction<Vehicle | null>>;
 }
 
 const VehicleList = (selectProps: SelectProps) => {
@@ -30,17 +31,18 @@ const VehicleList = (selectProps: SelectProps) => {
               onChange={(e) => {
                 setVehicleSelect(e.target.value)
                 setVehicle(vehicles.find((vehicle: Vehicle) => vehicle.id === e.target.value))
+                selectProps.setVehicle(vehicle);
               }}
             >
               <option value="">Choose...</option>
               {vehicles.map((vehicle: Vehicle) => (
                 <option key={vehicle.id} value={vehicle.id}>
-                  {vehicle.location}
+                  {vehicle.id}
                 </option>
               ))}
             </Form.Control>
             <Form.Text id="vehicleoverview">
-                <strong>ID: </strong> { vehicle ? vehicle?.id : "" } <br/>
+                <strong>Location: </strong> { vehicle ? vehicle?.location : "" } <br/>
                 <strong>Status: </strong> { vehicle ? vehicle?.status === 0 ? "OK" : "Busy" : "" } <br/>
             </Form.Text>
         </Form.Group>

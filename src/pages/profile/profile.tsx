@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, Col, Row } from 'react-bootstrap';
 import { useAuthContext, AuthContextType } from '../../components/auth/context';
 import "./profile.css"
 
 const UserProfile: React.FC = () => {
   const { currentUser } = useAuthContext() as AuthContextType;
+
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+  
   return (
       <Form id = "userprofile">
         <Form.Label id="header">User Profile</Form.Label>
@@ -28,19 +34,19 @@ const UserProfile: React.FC = () => {
 
         <Form.Group as={Row} className="mb-3" controlId="readOnly">
           <Form.Label column>
-            Birthday:
+            Role:
           </Form.Label>
           <Col xxl="auto">
-            <Form.Control plaintext readOnly defaultValue= {currentUser?.birthDate}/>
+            <Form.Control plaintext readOnly defaultValue= {currentUser?.role}/>
           </Col>
         </Form.Group>
 
         <Form.Group as={Row} className="mb-3" controlId="readOnly">
           <Form.Label column>
-            Email:
+            Password:
           </Form.Label>
           <Col xxl="auto">
-            <Form.Control type="email" plaintext readOnly defaultValue = {currentUser?.email} />
+            <Form.Control type="password" plaintext readOnly defaultValue = {currentUser?.password} />
           </Col>
         </Form.Group>
 

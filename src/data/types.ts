@@ -1,14 +1,12 @@
 
 export interface User{
-    id: string,
+    id: number,
     username: string,
-    email: string,
-    firstName: string,
-    lastName: string,
     password: string,
-    birthDate: string,
-    avatar: string,
-    memberSince: string,
+    role: string,
+    lastName: string,
+    firstName: string,
+    is_available: number
 }
 
 
@@ -28,4 +26,12 @@ export interface Vehicle {
     location: string,
     usebyID: string,
     status: number,
+}
+
+export interface MCP {
+    id: string,
+    location: [number, number],
+    capacity: number,
+    used: number,
+    is_full: boolean,
 }

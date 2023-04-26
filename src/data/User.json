@@ -1,0 +1,31 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "username": "a2pk",
+            "password": "admin",
+            "role": "backoffficer",
+            "lastName": "HCMUT",
+            "firstName": "A2PK",
+            "is_available": 1
+        },
+        {
+            "id": 2,
+            "username": "ta",
+            "password": "",
+            "role": "collector",
+            "lastName": "ta",
+            "firstName": "",
+            "is_available": 1
+        },
+        {
+            "id": 3,
+            "username": "kag",
+            "password": "",
+            "role": "janitor",
+            "lastName": "",
+            "firstName": "kag",
+            "is_available": 1
+        }
+    ]
+}

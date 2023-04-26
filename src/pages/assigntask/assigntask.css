@@ -1,0 +1,8 @@
+#assigntask #header {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    color: #f30a0a;
+    font-size: 1.5rem;
+    font-weight: bold;
+}

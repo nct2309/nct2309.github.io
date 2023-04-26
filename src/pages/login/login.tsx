@@ -8,20 +8,23 @@ import "./login.css";
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuthContext() as AuthContextType;
   const navigate = useNavigate();
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    // handle form submission here
     const loginUser = validateLogin(username, password);
     if (loginUser) {
       login(loginUser);
       navigate("/#");
-    }
-    else {
+    } else {
       alert("Invalid username or password");
     }
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
   };
 
   return (
@@ -42,10 +45,16 @@ const Login: React.FC = () => {
         <Form.Group controlId="formBasicPassword">
           <Form.Label>Password</Form.Label>
           <Form.Control
-            type="password"
+            type={showPassword ? "text" : "password"}
             placeholder="Password"
             value={password}
             onChange={(event) => setPassword(event.target.value)}
+          />
+          <Form.Check
+            type="checkbox"
+            label="Show password"
+            checked={showPassword}
+            onChange={togglePasswordVisibility}
           />
         </Form.Group>
         <Button variant="primary" type="submit">
