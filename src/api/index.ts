@@ -8,10 +8,11 @@ export async function getUsers() {
     try {
         const response = await fetch('https://localhost:8080/users/1', { 
             method: 'GET',
-            credentials: 'include', 
+            credentials: true, 
             headers: {
-                'Content-Type': 'application/json',
+                accept: 'application/json',
             },
+            mode: 'no-cors',
          });
 
         if (response.ok) {
