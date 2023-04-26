@@ -9,7 +9,7 @@ export async function getUsers() {
     try {
         // 👇️ const data: GetUsersResponse
         const { data, status } = await axios.get<GetUsersResponse>(
-        'https://localhost:8080/users/1',
+        'http://localhost:8080/users/1',
         {   
             withCredentials: true,
             headers: {
