@@ -1,4 +1,4 @@
-#userprofile {
+#userprofile, #changepassword {
     border: 1px solid #000000;
     border-radius: 15px;
     padding: 20px;
@@ -18,4 +18,17 @@
 
 #userprofile #readOnly {
     box-shadow: none;
+}
+
+#changepassword {
+    margin-top: 2rem;
+}
+
+#changepassword #header {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1rem;
+    color: #120101;
+    font-size: 1.5rem;
+    font-weight: bold;
 }

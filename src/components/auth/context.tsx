@@ -1,7 +1,7 @@
 import React from 'react';
 import { createContext } from 'react';
 import { useContext, useMemo } from 'react';
-import { User } from '../../data/types';
+import { User } from '../../api/types';
 import { Outlet, Navigate } from "react-router-dom";
 
 export type AuthContextType = {

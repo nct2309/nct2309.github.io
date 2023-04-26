@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form } from "react-bootstrap";
 import { truckData, trollerData } from "../../data/data";
-import { Vehicle } from "../../data/types";
+import { Vehicle } from "../../api/types";
 
 interface SelectProps {
   role: string;

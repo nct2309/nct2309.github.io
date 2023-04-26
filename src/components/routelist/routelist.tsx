@@ -4,8 +4,9 @@ import { routeData } from "../../data/data";
 
 interface SelectProps {
   role: string;
-  setMCPs: React.Dispatch<React.SetStateAction<null>>;
+  setMCPs: React.Dispatch<React.SetStateAction<[number, number][]>>;
 }
+
 
 interface SelectOption {
   id: string;
@@ -17,7 +18,7 @@ const routes: SelectOption[] = [
   { id: 'Route 2', value: [] },
 ];
 
-const RouteList = () => {
+const RouteList = (selectProps: SelectProps) => {
     const [route, setRoute] = useState('');
 
     return (

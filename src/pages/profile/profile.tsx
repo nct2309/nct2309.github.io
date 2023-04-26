@@ -1,17 +1,43 @@
 import React, { useState } from 'react';
-import { Form, Col, Row } from 'react-bootstrap';
+import { Form, Col, Row, Button } from 'react-bootstrap';
 import { useAuthContext, AuthContextType } from '../../components/auth/context';
 import "./profile.css"
 
 const UserProfile: React.FC = () => {
   const { currentUser } = useAuthContext() as AuthContextType;
+  const [password, setPassword] = useState<string>("");
+  const [newPassword, setNewPassword] = useState<string>("");
+  const [newPasswordAgain, setNewPasswordAgain] = useState<string>("");
 
-  const [showPassword, setShowPassword] = useState(false);
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
+  const handlePasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+  }
+  const handleNewPasswordChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNewPassword(event.target.value);
+  }
+  const handleNewPasswordAgainChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setNewPasswordAgain(event.target.value);
+  }
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (password !== currentUser?.password) {
+      alert('Wrong password!');
+    }
+    else if (newPassword !== newPasswordAgain) {
+      alert('Password does not match!');
+    }
+    else if (newPassword === "" || newPasswordAgain === "") {
+      alert('Password cannot be empty!');
+    }
+    else { 
+      currentUser.password = newPassword;
+      alert('Password Changed!');
+    }
   };
   
   return (
+    <>
       <Form id = "userprofile">
         <Form.Label id="header">User Profile</Form.Label>
         <Form.Group as={Row} className="mb-3" controlId="readOnly">
@@ -49,16 +75,40 @@ const UserProfile: React.FC = () => {
             <Form.Control type="password" plaintext readOnly defaultValue = {currentUser?.password} />
           </Col>
         </Form.Group>
+      </Form>
 
+
+      <Form id="changepassword" onSubmit={handleSubmit}>
+      <Form.Label id="header">Change Passwword</Form.Label>
         <Form.Group as={Row} className="mb-3">
           <Form.Label column>
-            Password:
+            Old password:
           </Form.Label>
           <Col xxl="auto">
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="password" placeholder="Password" value={password} onChange={handlePasswordChange}/>
           </Col>
         </Form.Group>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column>
+            New password:
+          </Form.Label>
+          <Col xxl="auto">
+            <Form.Control type="password" placeholder="Password" value={newPassword} onChange={handleNewPasswordChange}/>
+          </Col>
+        </Form.Group>
+        <Form.Group as={Row} className="mb-3">
+          <Form.Label column>
+            New password again:
+          </Form.Label>
+          <Col xxl="auto">
+            <Form.Control type="password" placeholder="Password" value={newPasswordAgain} onChange={handleNewPasswordAgainChange}/>
+          </Col>
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Change Password
+        </Button>
       </Form>
+    </>
   );
 };
 
