@@ -32,13 +32,13 @@ const Map = (mapProps: MapProps) => {
   };
 
   const showRoute = (map: L.Map, mcps: MCP[]) => {
-    const coordinates = mcps.map(mcp => [mcp.lat, mcp.long] as [number, number]);
+    const coordinates = mcps.map(mcp => [mcp.latitude, mcp.longitude] as [number, number]);
     L.polyline(coordinates, { color: 'blue' }).addTo(map);
   };
 
   // Update coordinates state when mcps prop changes
   useEffect(() => {
-    const newCoordinates = mcps.map(mcp => [mcp.lat, mcp.long] as [number, number]);
+    const newCoordinates = mcps.map(mcp => [mcp.latitude, mcp.longitude] as [number, number]);
     setCoordinates(newCoordinates);
   }, [mcps]);
 

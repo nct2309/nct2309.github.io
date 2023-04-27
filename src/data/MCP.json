@@ -2,21 +2,164 @@
   "data": [
     {
       "id": 1,
-      "lat": 10.812819761087324, 
-      "long": 106.67601429306423,
+      "latitude": 10.812819761087324,
+      "longitude": 106.67601429306423,
       "capacity": 1500,
       "used": 0.8,
       "is_full": true
     },
     {
       "id": 2,
-      "lat": 10.813, 
-      "long": 106.676,
+      "latitude": 10.812049083102767,
+      "longitude": 106.62881038569635,
+      "capacity": 500,
+      "used": 0.1,
+      "is_full": false
+    },
+    {
+      "id": 3,
+      "latitude": 10.79283204256991,
+      "longitude": 106.62698847420198,
+      "capacity": 2000,
+      "used": 0.6,
+      "is_full": false
+    },
+    {
+      "id": 4,
+      "latitude": 10.80447286789098,
+      "longitude": 106.70366114532092,
+      "capacity": 1000,
+      "used": 0.5,
+      "is_full": false
+    },
+    {
+      "id": 5,
+      "latitude": 10.844604231360733,
+      "longitude": 106.68471975836487,
+      "capacity": 1800,
+      "used": 0.9,
+      "is_full": true
+    },
+    {
+      "id": 6,
+      "latitude": 10.779728364348004,
+      "longitude": 106.7422172952286,
+      "capacity": 1200,
+      "used": 0.3,
+      "is_full": false
+    },
+    {
+      "id": 7,
+      "latitude": 10.78364535650905,
+      "longitude": 106.68177009917803,
+      "capacity": 800,
+      "used": 0.7,
+      "is_full": true
+    },
+    {
+      "id": 8,
+      "latitude": 10.7629540102621,
+      "longitude": 106.70237120427108,
       "capacity": 1500,
+      "used": 0.2,
+      "is_full": false
+    },
+    {
+      "id": 9,
+      "latitude": 10.756059497754208,
+      "longitude": 106.66464083218718,
+      "capacity": 1700,
+      "used": 0.4,
+      "is_full": false
+    },
+    {
+      "id": 10,
+      "latitude": 10.723444408569306,
+      "longitude": 106.72828354226737,
+      "capacity": 1000,
+      "used": 0.1,
+      "is_full": false
+    },
+    {
+      "id": 11,
+      "latitude": 10.828523,
+      "longitude": 106.829245,
+      "capacity": 800,
       "used": 0.8,
       "is_full": true
+    },
+    {
+      "id": 12,
+      "latitude": 10.751030,
+      "longitude": 106.590567,
+      "capacity": 2000,
+      "used": 0.5,
+      "is_full": false
+    },
+        {
+          "id": 13,
+          "latitude": 10.908439,
+          "longitude": 106.586395,
+          "capacity": 1200,
+          "used": 0.9,
+          "is_full": true
+        },
+        {
+          "id": 14,
+          "latitude": 11.007871,
+          "longitude": 106.494275,
+          "capacity": 1620,
+          "used": 0.2,
+          "is_full": false
+        },
+        {
+          "id": 15,
+          "latitude": 10.772262,
+          "longitude": 106.702382,
+          "capacity": 1600,
+          "used": 0.6,
+          "is_full": false
+        },
+        {
+          "id": 16,
+          "latitude": 10.420790,
+          "longitude": 106.969030,
+          "capacity": 800,
+          "used": 0.3,
+          "is_full": false
+        },
+        {
+          "id": 17,
+          "latitude": 10.743273,
+          "longitude": 106.434547,
+          "capacity": 1900,
+          "used": 0.7,
+          "is_full": true
+        },
+        {
+          "id": 18,
+          "latitude": 10.925458,
+          "longitude": 106.872614,
+          "capacity": 1100,
+          "used": 0.4,
+          "is_full": false
+        },
+        {
+          "id": 19,
+          "latitude": 10.944189,
+          "longitude": 106.781063,
+          "capacity": 1700,
+          "used": 0.1,
+          "is_full": false
+        },
+        {
+          "id": 20,
+          "latitude": 10.361406,
+          "longitude": 107.073013,
+          "capacity": 500,
+          "used": 0.2,
+          "is_full": false
+        }
+      ]
     }
-  
-  ]
-}
     

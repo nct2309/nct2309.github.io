@@ -2,7 +2,7 @@
   "data": [
     {
       "id": 1,
-      "mcpList": [1]
+      "mcpList": [1, 2, 4]
     }
   ]
 }

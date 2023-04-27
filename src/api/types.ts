@@ -30,8 +30,8 @@ export interface User{
 
 export interface MCP {
     id: number,
-    lat:number,
-    long:number,
+    latitude:number,
+    longitude:number,
     capacity: number,
     used: number,
     is_full: boolean,

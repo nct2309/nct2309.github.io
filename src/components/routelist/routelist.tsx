@@ -17,7 +17,7 @@ const RouteList = (selectProps: SelectProps) => {
     
     return (
       <Form.Group controlId="vehicle-select">
-          <Form.Label>Select Vehicle</Form.Label>
+          <Form.Label>Select Route</Form.Label>
           <Form.Control
             as="select"
             value={routeSelect}
@@ -38,6 +38,14 @@ const RouteList = (selectProps: SelectProps) => {
               </option>
             ))}
           </Form.Control>
+          {/* { selectProps.mcps ?
+            <Form.Text id="vehicleoverview">
+                <strong>Location: </strong> {selectProps.mcps.location} <br/>
+                <strong>Status: </strong> {selectProps.mcp.is_available === true ? "OK" : "Busy"} <br/>
+                <strong>Capacity: </strong> {selectProps.vehicle.capacity} <br/>
+                <strong>Fuel: </strong> {selectProps.vehicle.fuel*100}% <br/>
+            </Form.Text>
+            :  ""} */}
       </Form.Group>
   );
 }
