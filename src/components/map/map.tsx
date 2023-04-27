@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
+import { MCP } from '../../api/types';
 import markerIcon from 'leaflet/dist/images/marker-icon.png';
 import markerShadow from 'leaflet/dist/images/marker-shadow.png';
 
-//const coordinates: [number, number][] = [[10.7731603, 106.6595802], [10.78, 106.66]];
-// interface MCP {
-  
-// }
+interface MapProps {
+  mcps: MCP[];
+}
 
-
-const Map: React.FC = () => {
+const Map = (mapProps: MapProps) => {
+  const { mcps } = mapProps;
   const mapRef = useRef<HTMLDivElement | null>(null);
   const center: [number, number] = [10.7731603, 106.6595802];
   const zoom = 17.5;
@@ -31,9 +31,16 @@ const Map: React.FC = () => {
     L.marker(position, { icon: defaultIcon }).addTo(map);
   };
 
-  const showRoute = (map: L.Map, coordinates: [number, number][]) => {
+  const showRoute = (map: L.Map, mcps: MCP[]) => {
+    const coordinates = mcps.map(mcp => [mcp.lat, mcp.long] as [number, number]);
     L.polyline(coordinates, { color: 'blue' }).addTo(map);
   };
+
+  // Update coordinates state when mcps prop changes
+  useEffect(() => {
+    const newCoordinates = mcps.map(mcp => [mcp.lat, mcp.long] as [number, number]);
+    setCoordinates(newCoordinates);
+  }, [mcps]);
 
   useEffect(() => {
     if (!mapRef.current) return;
@@ -46,11 +53,11 @@ const Map: React.FC = () => {
     }).addTo(map);
 
     addMarker(map, center);
+    coordinates.forEach((coordinate) => {addMarker(map, coordinate)});
 
     if (coordinates) {
-      showRoute(map, coordinates);
+      showRoute(map, mcps);
     }
-
     return () => {
       map.remove();
     };

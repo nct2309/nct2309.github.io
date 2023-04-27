@@ -6,39 +6,41 @@ export interface User{
     role: string,
     lastName: string,
     firstName: string,
-    is_available: number
+    is_available: boolean,
 }
 
 // Should be not used
-export interface Worker {
-    id: string,
-    username: string,
-    firstName: string,
-    lastName: string,
-    position:  number,
-    avatar: string,
-    status: number,
-    memberSince: string,
-}
+// export interface Worker {
+//     id: string,
+//     username: string,
+//     firstName: string,
+//     lastName: string,
+//     position:  number,
+//     avatar: string,
+//     status: number,
+//     memberSince: string,
+// }
 
-export interface Vehicle {
-    id: string,
-    location: string,
-    usebyID: string,
-    status: number,
-}
+// export interface Vehicle {
+//     id: string,
+//     location: string,
+//     usebyID: string,
+//     status: number,
+// }
 
 export interface MCP {
     id: number,
-    location: [number, number],
+    lat:number,
+    long:number,
     capacity: number,
     used: number,
     is_full: boolean,
 }
 
-export interface Vehicles {
+export interface Vehicle {
     id: number,
     is_available: boolean,
+    location: string,
     capacity: number,
     fuel: number,
     type: string,
@@ -49,7 +51,12 @@ export interface Task {
     from_user_id: number,
     to_user_id: number,
     vehicle_id: number,
-    mcp_location: [number, number][],
+    mcp_id: number[],
     created_at: string,
     completed_at: string,
+}
+
+export interface Route {
+    id: number,
+    mcpList: number[],
 }

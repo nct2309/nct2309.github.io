@@ -7,7 +7,7 @@
             "role": "backoffficer",
             "lastName": "HCMUT",
             "firstName": "A2PK",
-            "is_available": 1
+            "is_available": true
         },
         {
             "id": 2,
@@ -15,17 +15,179 @@
             "password": "",
             "role": "collector",
             "lastName": "ta",
-            "firstName": " vai ca l",
-            "is_available": 1
+            "firstName": " gia khang",
+            "is_available": true
         },
         {
             "id": 3,
             "username": "kag",
             "password": "",
             "role": "janitor",
-            "lastName": "mon hoi non",
+            "lastName": " nguyen phuc gia",
             "firstName": "kag",
-            "is_available": 1
+            "is_available": true
+        },
+        {
+        "id": 4,
+        "username": "megan",
+        "password": "pass123",
+        "role": "backofficer",
+        "lastName": "Johnson",
+        "firstName": "Megan",
+        "is_available": true
+        },
+        {
+        "id": 5,
+        "username": "tina",
+        "password": "tina123",
+        "role": "collector",
+        "lastName": "Lee",
+        "firstName": "Tina",
+        "is_available": false
+        },
+        {
+        "id": 6,
+        "username": "peter",
+        "password": "peter123",
+        "role": "janitor",
+        "lastName": "Chen",
+        "firstName": "Peter",
+        "is_available": true
+        },
+        {
+        "id": 7,
+        "username": "john",
+        "password": "john123",
+        "role": "backofficer",
+        "lastName": "Smith",
+        "firstName": "John",
+        "is_available": false
+        },
+        {
+        "id": 8,
+        "username": "sarah",
+        "password": "sarah123",
+        "role": "collector",
+        "lastName": "Nguyen",
+        "firstName": "Sarah",
+        "is_available": true
+        },
+        {
+        "id": 9,
+        "username": "david",
+        "password": "david123",
+        "role": "janitor",
+        "lastName": "Wong",
+        "firstName": "David",
+        "is_available": false
+        },
+        {
+            "id": 10,
+            "username": "lan",
+            "password": "lan123",
+            "role": "backofficer",
+            "lastName": "Trần",
+            "firstName": "Lan",
+            "is_available": true
+        },
+        {
+            "id": 11,
+            "username": "tùng",
+            "password": "tung123",
+            "role": "collector",
+            "lastName": "Nguyễn",
+            "firstName": "Tùng",
+            "is_available": false
+        },
+        {
+            "id": 12,
+            "username": "hương",
+            "password": "huong123",
+            "role": "janitor",
+            "lastName": "Lê",
+            "firstName": "Hương",
+            "is_available": true
+        },
+        {
+            "id": 13,
+            "username": "thuận",
+            "password": "thuan123",
+            "role": "backofficer",
+            "lastName": "Trần",
+            "firstName": "Thuận",
+            "is_available": false
+        },
+        {
+            "id": 14,
+            "username": "thu",
+            "password": "thu123",
+            "role": "collector",
+            "lastName": "Đặng",
+            "firstName": "Thu",
+            "is_available": true
+        },
+        {
+            "id": 15,
+            "username": "tân",
+            "password": "tan123",
+            "role": "janitor",
+            "lastName": "Nguyễn",
+            "firstName": "Tân",
+            "is_available": false
+        },
+        {
+            "id": 16,
+            "username": "antoine",
+            "password": "antoine123",
+            "role": "backofficer",
+            "lastName": "Dubois",
+            "firstName": "Antoine",
+            "is_available": true
+        },
+        {
+            "id": 17,
+            "username": "lucie",
+            "password": "lucie123",
+            "role": "collector",
+            "lastName": "Martin",
+            "firstName": "Lucie",
+            "is_available": false
+        },
+        {
+            "id": 18,
+            "username": "julien",
+            "password": "julien123",
+            "role": "janitor",
+            "lastName": "Lefèvre",
+            "firstName": "Julien",
+            "is_available": true
+        },
+        {
+            "id": 19,
+            "username": "elodie",
+            "password": "elodie123",
+            "role": "backofficer",
+            "lastName": "Leroy",
+            "firstName": "Elodie",
+            "is_available": false
+        },
+        {
+            "id": 20,
+            "username": "camille",
+            "password": "camille123",
+            "role": "collector",
+            "lastName": "Rousseau",
+            "firstName": "Camille",
+            "is_available": true
+        },
+        {
+            "id": 21,
+            "username": "mathieu",
+            "password": "mathieu123",
+            "role": "janitor",
+            "lastName": "Girard",
+            "firstName": "Mathieu",
+            "is_available": false
         }
     ]
 }

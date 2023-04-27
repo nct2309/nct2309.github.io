@@ -1,0 +1,149 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "capacity": 6500,
+            "fuel": 0.8,
+            "location": "HCM City University of Technology 1",
+            "type": "truck",
+            "is_available": true
+        },
+        {
+            "id": 2,
+            "capacity": 50,
+            "fuel": 0,
+            "location": "HCM City University of Technology 1",
+            "type": "troller",
+            "is_available": true
+        },
+        {
+          "id": 3,
+          "capacity": 5000,
+          "fuel": 0.5,
+          "location": "Tan Son Nhat International Airport",
+          "type": "truck",
+          "is_available": true
+        },
+        {
+          "id": 4,
+          "capacity": 100,
+          "fuel": 0.1,
+          "location": "Bui Vien Street",
+          "type": "troller",
+          "is_available": true
+        },
+        {
+          "id": 5,
+          "capacity": 2000,
+          "fuel": 0.9,
+          "location": "Pham Van Dong Street",
+          "type": "truck",
+          "is_available": false
+        },
+        {
+          "id": 6,
+          "capacity": 75,
+          "fuel": 0.4,
+          "location": "Saigon River Port",
+          "type": "troller",
+          "is_available": true
+        },
+        {
+          "id": 7,
+          "capacity": 8000,
+          "fuel": 0.7,
+          "location": "Thu Thiem Tunnel",
+          "type": "truck",
+          "is_available": true
+        },
+        {
+          "id": 8,
+          "capacity": 150,
+          "fuel": 0.2,
+          "location": "Notre-Dame Cathedral Basilica of Saigon",
+          "type": "troller",
+          "is_available": true
+        },
+        {
+          "id": 9,
+          "capacity": 3500,
+          "fuel": 0.6,
+          "location": "Saigon Hi-Tech Park",
+          "type": "truck",
+          "is_available": false
+        },
+        {
+          "id": 10,
+          "capacity": 50,
+          "fuel": 0.4,
+          "location": "Bach Dang Wharf",
+          "type": "troller",
+          "is_available": true
+        },
+        {
+          "id": 11,
+          "capacity": 6000,
+          "fuel": 0.8,
+          "location": "Ben Thanh Market",
+          "type": "truck",
+          "is_available": true
+        },
+        {
+          "id": 12,
+          "capacity": 200,
+          "fuel": 0.3,
+          "location": "Saigon Central Post Office",
+          "type": "troller",
+          "is_available": true
+        },
+        {
+          "id": 13,
+          "capacity": 4000,
+          "fuel": 0.5,
+          "location": "Tan Thuan Export Processing Zone",
+          "type": "truck",
+          "is_available": false
+        },
+        {
+          "id": 14,
+          "capacity": 30,
+          "fuel": 0.1,
+          "location": "Turtle Lake",
+          "type": "troller",
+          "is_available": true
+        },
+        {
+          "id": 15,
+          "capacity": 350,
+          "fuel": 0.2,
+          "location": "Saigon South Golf Course",
+          "type": "troller",
+          "is_available": true
+        },
+        {
+          "id": 16,
+          "capacity": 4500,
+          "fuel": 0.6,
+          "location": "Phu My Hung Urban Area",
+          "type": "truck",
+          "is_available": true
+        },
+        {
+          "id": 17,
+          "capacity": 100,
+          "fuel": 0.1,
+          "location": "Saigon Opera House",
+          "type": "troller",
+          "is_available": false
+        },
+        {
+          "id": 18,
+          "capacity": 8000,
+          "fuel": 0.7,
+          "location": "Long Thanh-Dau Giay Expressway",
+          "type": "truck",
+          "is_available": true
+        }
+       
+    ]
+}

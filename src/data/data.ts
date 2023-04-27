@@ -8,30 +8,29 @@ import mcp from './MCP.json';
 import messages from './Messages.json';
 import route from './Route.json';
 import troller from './Troller.json';
+
 import user from './User.json'
+import vehicle from './Vehicle.json'
 
 export const activityData = activity.data;
-export const backOfficerData = backOfficer.data;
-export const truckData = truck.data;
-export const collectorData = collector.data;
-export const janitorData = janitor.data;
-export const mcpData = mcp.data;
+
 export const messagesData = messages.data;
 export const routeData = route.data;
-export const trollerData = troller.data;
+
 export const userData = user.data;
+export const vehicleData = vehicle.data;
+export const mcpData = mcp.data;
 
 const data = {
     'user': userData,
-    'activity': activityData,
-    'backOfficer': backOfficerData,
-    'truck': truckData,
-    'collector': collectorData,
-    'janitor': janitorData,
+    'vehicle': vehicleData,
+    
     'mcp': mcpData,
     'messages': messagesData,
+
+    'activity': activityData,
     'route': routeData,
-    'troller': trollerData,
+    
 }
 
 export default data;
