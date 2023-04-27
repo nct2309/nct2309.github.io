@@ -16,6 +16,12 @@ const AssignTask: React.FC = () => {
 
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
+    if (role === "" || dateTime === "") {
+      alert('There should be no empty sections!');
+    }
+    else {
+      alert('Task Assigned!');
+    }
   };
 
   return (

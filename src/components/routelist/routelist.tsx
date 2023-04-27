@@ -38,14 +38,11 @@ const RouteList = (selectProps: SelectProps) => {
               </option>
             ))}
           </Form.Control>
-          {/* { selectProps.mcps ?
+          { route ?
             <Form.Text id="vehicleoverview">
-                <strong>Location: </strong> {selectProps.mcps.location} <br/>
-                <strong>Status: </strong> {selectProps.mcp.is_available === true ? "OK" : "Busy"} <br/>
-                <strong>Capacity: </strong> {selectProps.vehicle.capacity} <br/>
-                <strong>Fuel: </strong> {selectProps.vehicle.fuel*100}% <br/>
+                <strong>MCP(s) pass: </strong> {route.mcpList.map((id) => id + ", ")} <br/>
             </Form.Text>
-            :  ""} */}
+            :  ""}
       </Form.Group>
   );
 }
