@@ -81,7 +81,7 @@ const UserProfile: React.FC = () => {
 
 
       <Form id="changepassword" onSubmit={handleSubmit}>
-      <Form.Label id="header">Change Passwword</Form.Label>
+      <Form.Label id="header">Change Password</Form.Label>
         <Form.Group as={Row} className="mb-3">
           <Form.Label column>
             Old password:
