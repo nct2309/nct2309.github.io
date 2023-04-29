@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Container, Row, Form, Table } from 'react-bootstrap';
 import "./taskprogress.css"
-import { activityData } from '../../data/data';
-
-export const items = activityData;
+import { activityData, tasksData } from '../../data/data';
+import { useAuthContext, AuthContextType } from '../../components/auth/context';
+//export const items = tasksData;
 
 const TaskProgress = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -16,13 +16,17 @@ const TaskProgress = () => {
     event.preventDefault();
     // Perform search here
   };
+  const { tasks } = useAuthContext() as AuthContextType;
+  const items = tasks;
 
-  const filteredItems = items.filter((item) => (
-    item.id.toLowerCase().includes(searchTerm.toLowerCase()) //||
-    //item.id.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    //item.lastCollected.toLowerCase().includes(searchTerm.toLowerCase())
-  ));
+  const filteredItems = items.filter((item) => {
+    if (searchTerm === '') {
+      return true;
+    }
+    else return item.id === Number(searchTerm);
+  });
 
+  
   return (
     <Container id="listing">
       <Row>
@@ -42,20 +46,22 @@ const TaskProgress = () => {
               <thead style={{ backgroundColor: '#f8f9fa', position: 'sticky', top: 0 }}>
                 <tr>
                   <th>ID</th>
-                  <th>Route ID</th>
+                  <th>Back officer ID</th>
+                  <th>Worker ID</th>
                   <th>Vehicle ID</th>
-                  <th>Employee ID</th>
-                  <th>Time</th>
+                  <th>Route ID</th>
+                  <th>Create at</th>
                 </tr>
               </thead>
               <tbody>
                 {filteredItems.map((item) => (
                   <tr key={item.id}>
                     <td>{item.id}</td>
-                    <td>{item.routeId}</td>
-                    <td>{item.vehicleId}</td>
-                    <td>{item.employeesId.map((item)=>(" " + item))}</td>
-                    <td>{item.timestamp}</td>
+                    <td>{item.from_user_id}</td>
+                    <td>{item.to_user_id}</td>
+                    <td>{item.vehicle_id}</td>
+                    <td>{item.route_id}</td>
+                    <td>{item.created_at}</td>
                   </tr>
                 ))}
               </tbody>

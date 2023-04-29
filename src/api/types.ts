@@ -51,7 +51,7 @@ export interface Task {
     from_user_id: number,
     to_user_id: number,
     vehicle_id: number,
-    mcp_id: number[],
+    route_id: number,
     created_at: string,
     completed_at: string,
 }
