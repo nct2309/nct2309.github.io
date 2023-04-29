@@ -33,8 +33,9 @@ export const AuthContextProvider:React.FC<{ children: React.ReactNode }> = ({chi
     }, []);
 
     const Login = (user : User) => {
-        if (localStorage.getItem('tasks') !== null) {
+        if (localStorage.getItem('tasks') === null) {
             localStorage.setItem('tasks', JSON.stringify(tasksData));
+            setTasks(tasksData as Task[]);
         }
         localStorage.setItem('currentUser', JSON.stringify(user));
         setCurrentUser(user);

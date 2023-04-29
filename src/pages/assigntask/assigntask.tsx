@@ -52,7 +52,7 @@ const AssignTask: React.FC = () => {
         route_id: route.id,
         created_at: dateTime,
         completed_at: "",
-      } as Task);
+      });
       localStorage.setItem('tasks', JSON.stringify(tasks));
       alert('Task Assigned!');
 
@@ -79,9 +79,6 @@ const AssignTask: React.FC = () => {
                   localStorage.removeItem('role');
                   setRole(e.target.value);
                   if (role === "") {
-                    setWorkerSelect("");
-                    setVehicleSelect("");
-                    setRouteSelect("");
                     setRoute(null);
                     setWorker(null);
                     setVehicle(null);

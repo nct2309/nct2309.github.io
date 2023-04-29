@@ -17,12 +17,7 @@ const TaskProgress = () => {
   const { tasks } = useAuthContext() as AuthContextType;
   const items = tasks;
 
-  const filteredItems = items.filter((item) => {
-    if (searchTerm === '') {
-      return true;
-    }
-    else return item.id === Number(searchTerm);
-  });
+  const filteredItems = (items? items : []).filter((item) => searchTerm === "" || item.id === Number(searchTerm));
 
   
   return (
