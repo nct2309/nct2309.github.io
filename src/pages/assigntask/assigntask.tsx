@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import Map from '../../components/map/map';
 import { Form, Button, Container, Row } from 'react-bootstrap';
-//import WorkerList from '../../components/workerlist/workerlist';
-//import VehicleList from '../../components/vehiclelist/vehiclelist';
-//import RouteList from '../../components/routelist/routelist';
 import { User, Vehicle, MCP, Route, Task } from '../../api/types';
 import { useAuthContext, AuthContextType } from '../../components/auth/context';
 import { userData, vehicleData, routeData, mcpData } from '../../data/data';
@@ -82,6 +79,10 @@ const AssignTask: React.FC = () => {
                   localStorage.removeItem('role');
                   setRole(e.target.value);
                   if (role === "") {
+                    setWorkerSelect("");
+                    setVehicleSelect("");
+                    setRouteSelect("");
+                    setRoute(null);
                     setWorker(null);
                     setVehicle(null);
                     setMcps([]);

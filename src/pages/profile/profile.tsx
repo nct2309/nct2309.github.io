@@ -32,6 +32,8 @@ const UserProfile: React.FC = () => {
     }
     else { 
       currentUser.password = newPassword;
+      localStorage.removeItem('currentUser');
+      localStorage.setItem('currentUser', JSON.stringify(currentUser));
       alert('Password Changed!');
     }
   };

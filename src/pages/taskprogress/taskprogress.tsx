@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Form, Table } from 'react-bootstrap';
 import "./taskprogress.css"
-import { activityData, tasksData } from '../../data/data';
 import { useAuthContext, AuthContextType } from '../../components/auth/context';
-//export const items = tasksData;
 
 const TaskProgress = () => {
   const [searchTerm, setSearchTerm] = useState('');
