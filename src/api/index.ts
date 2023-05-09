@@ -1,37 +1,21 @@
-import { User } from './types';
+import { User } from "./types";
+import axios from "axios";
 
 type GetUsersResponse = {
-    data: User[];
+  data: User[];
 };
 
-export async function getUsers() {
-    try {
-        const response = await fetch('http://localhost:8080/users/1', { 
-            method: 'GET',
-            credentials: 'include', 
-            headers: {
-                'Content-Type': 'application/json',
-                accept: 'application/json',
-            },
-            mode: 'no-cors',
-         });
-
-        if (response.ok) {
-            const data = await response.json() as GetUsersResponse;
-            console.log(data);
-
-            console.log(JSON.stringify(data, null, 4));
-
-            console.log('response status is: ', response.status);
-
-            return data.data;
-        } else {
-            throw new Error(`Error fetching users: \${response.statusText}`);
-        }
-    } catch (error) {
-        console.log(error);
-        return [];
-    }
+export async function getUsers(): Promise<User> {
+  return axios
+    .get("http://localhost:8080/users/1", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+    .then((response) => {
+      return response.data;
+    });
 }
 
 export default getUsers;
